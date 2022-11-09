@@ -19,7 +19,9 @@ FROM
     venue_
 GROUP BY state;
 
-/* Events are held in many different venues throughout the participating cities on LetsMeet. New York is the city which easily leads the way in the amount of venues it has, followed by Illinois and California. California only has a little over one third of the amount of venues that New York does.        */
+/* Events are held in many different venues throughout the participating cities on LetsMeet. New York is the city which easily leads the way 
+in the amount of venues it has, followed by Illinois and California. California only has a little over one third of the amount of venues that 
+New York does.        */
 
 
 -- grp
@@ -37,7 +39,9 @@ FROM
     grp
 GROUP BY visibility;
 
-/* The three "join modes" are Open, Approval, and Closed. 90 percent of all members belong to groups with an "open" join mode. 89.86 percent of all members belong to groups with "public" visiibility. Groups that are completley inclusive and open to all members contain the bulk of all activity throughout the platform.   */
+/* The three "join modes" are Open, Approval, and Closed. 90 percent of all members belong to groups with an "open" join mode. 
+89.86 percent of all members belong to groups with "public" visiibility. Groups that are completley inclusive and open to all members contain the
+bulk of all activity throughout the platform.   */
 
 
 -- grp_member
@@ -63,7 +67,9 @@ FROM
 GROUP BY group_id
 ORDER BY COUNT(DISTINCT (member_id)) DESC;
 
-/* When we look at the top groups in the participating cities, we can see that nine out the top ten groups with the most members are in Chicago and New York. The lone group in the top ten from San Francisco (SF Free School) has 222 members. The group with the most amount of members on the platform is a Socializing group from Chicago and has 436 members.    */
+/* When we look at the top groups in the participating cities, we can see that nine out the top ten groups with the most members are
+in Chicago and New York. The lone group in the top ten from San Francisco (SF Free School) has 222 members. The group with the most amount of members
+on the platform is a Socializing group from Chicago and has 436 members.    */
 
 
 -- city
@@ -81,7 +87,8 @@ FROM
 GROUP BY state
 ORDER BY COUNT(zip) DESC;
 
-/* The states and cities on the platform contain groups and members in various zip codes.  Illinois is the state with the most extensive geographic reach in terms of zip codes with groups in them. They have five distinct zip codes with members. New York is by far the state with the most members.     */
+/* The states and cities on the platform contain groups and members in various zip codes.  Illinois is the state with the most extensive geographic
+reach in terms of zip codes with groups in them. They have five distinct zip codes with members. New York is by far the state with the most members.     */
     
 
 -- event
@@ -125,7 +132,9 @@ FROM
 WHERE
     how_to_find_us = 'not_found';
 
-/* There are many diverse events being held through the platform. Out of the 5,807 distinct events, 2,735 have a "not_found" value under the column named "how_to_find_us". This means almost have of the groups are not directing their members to the events through LetsMeet. Many groups are instructing its members on how to find the events through the event description.     */
+/* There are many diverse events being held through the platform. Out of the 5,807 distinct events, 2,735 have a "not_found" value under the
+column named "how_to_find_us". This means almost have of the groups are not directing their members to the events through LetsMeet. Many groups are
+instructing its members on how to find the events through the event description.     */
 
 
 -- category
@@ -158,6 +167,7 @@ WHERE
 GROUP BY city
 ORDER BY SUM(members) DESC;
 
-/* LetsMeet has a diverse variety of categories of which groups belong to. Tech is by far the most popular category throughout the platform but more specifically, Tech in New York is the category and city with the most amount of members out of all those on LetsMeet.        */
+/* LetsMeet has a diverse variety of categories of which groups belong to. Tech is by far the most popular category throughout the platform but
+more specifically, Tech in New York is the category and city with the most amount of members out of all those on LetsMeet.        */
 
 
