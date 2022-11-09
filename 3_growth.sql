@@ -6,6 +6,8 @@ FROM grp_member;
 
 -- 2.)
 
+-- -- Growth of LetsMeet based on the # of members who joined each year
+
 
 SELECT 
     year_joined, COUNT(member_id) AS members_joined
@@ -19,6 +21,9 @@ GROUP BY year_joined
 ORDER BY year_joined;
 
 -- 3.)
+
+
+-- Renaming smaller cities to the name of their larger urban areas
 
 
 
@@ -54,6 +59,9 @@ GROUP BY city;
 
 
 -- 4.)
+
+
+-- Differences in year over year growth by city (SUBQUERY)
 
 
 
@@ -98,6 +106,10 @@ ORDER BY year_;
 
 
 -- 5.)
+
+-- Membership growth in 2017
+
+
 
 SELECT 
     month_, COUNT(member_id) members_joined
