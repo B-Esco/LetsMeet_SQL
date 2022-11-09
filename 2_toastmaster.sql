@@ -1,6 +1,6 @@
 
 
--- 2.)
+-- 2.) "The total number of Toastmaster events on LetsMeet"
 
 
 
@@ -13,7 +13,7 @@ WHERE
         OR ('%Toastmaster%');
 
 
--- 3.)
+-- 3.) "Toastmaster events alongside cities in which they are hosted"
 
 
 SELECT 
@@ -30,7 +30,7 @@ WHERE
         
 	
     
- -- 4.)
+ -- 4.) "Exact counts for how particular cities host toastmasters events"
  
  
 
